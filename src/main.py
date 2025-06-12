@@ -19,7 +19,7 @@ def main():
     parser.add_argument(
         "-p", "--path",
         type=str,
-        help="Path to the source directory (for encode/dry) or to the directory with stego images (for decode).",
+        help="Path to the source directory (for encode/dry).",
     )
 
     parser.add_argument(
@@ -83,18 +83,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-    # # Change these as needed:
-    # directory_to_zip = 'ex'  # directory to archive and embed
-    # images = ['res/gizli.png', 'res/gizli2.png', 'res/gizli3.png', 'res/gizli4.png','res/gizli5.png', 'res/gizli6.png', 'res/gizli7.png', 'res/gizli8.png']  # source images for embedding
-    # output_folder = 'output_embedded'  # folder to save stego images
-    # zip_file_name = 'data.zip'  # temporary zip filename
-    # recovered_zip_name = 'recovered.zip'  # recovered zip filename
-
-    # # Embed zip archive of directory into images
-    # # embed_zip_of_dir_into_images(directory_to_zip, images, output_folder, zip_file_name)
-
-    # # # Recover zip archive from images
-    # embedded_images = [os.path.join(output_folder, f) for f in os.listdir(output_folder) if f.endswith('.png')]
-    # embedded_images.sort()  # ensure correct order
-    # recover_zip_from_images(embedded_images, recovered_zip_name)
